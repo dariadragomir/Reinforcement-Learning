@@ -13,11 +13,19 @@ The project highlights the evolution from standard implementation to hyperparame
 
 # 2. Algorithms:
 1. DQN (Deep Q-Network) - Value-Based
+   
+    The foundational deep RL algorithm that combines Q-Learning with deep neural networks. It utilizes Experience Replay and a Target Network to stabilize training by breaking correlations between consecutive samples.
+   
 2. PPO (Proximal Policy Optimization) - Policy-Based
-3. A2C/ Dueling DQN/ C51
+   
+   A policy gradient method that alternates between sampling data through interaction with the environment and optimizing a "surrogate" objective function using stochastic gradient descent. It balances exploration and exploitation by clipping policy updates to prevent destructive large steps.
+   
+3. C51(Categorical DQN) - Distributional Value-Based
 
+  A distributional perspective on reinforcement learning. Instead of estimating only the expected mean Q-value (as DQN does), C51 models the entire probability distribution of returns using a categorical distribution with 51 fixed support points (atoms). By capturing the variance and uncertainty of future rewards, it provides richer training signals and significantly improves stability and asymptotic performance on Atari benchmarks.
+  
 # 3. Extensive hyperparameter optimization 
-learning rate, buffer size, ent_coef to analyze overfitting and exploration.
+Learning rate, buffer size, and ent_coef (entropy coefficient) are tuned to analyze the trade-off between overfitting and exploration.
 
 # 4. Metrics
-Visualization of Reward per Episode, Loss, and Q-Values using TensorBoard/WandB.
+Visualization of Reward per Episode, Loss, and Q-Values using Seaborn.
