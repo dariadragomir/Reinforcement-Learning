@@ -22,7 +22,7 @@ The project highlights the evolution from standard implementation to hyperparame
    
 3. C51(Categorical DQN) - Distributional Value-Based
 
-  A distributional perspective on reinforcement learning. Instead of estimating only the expected mean Q-value (as DQN does), C51 models the entire probability distribution of returns using a categorical distribution with 51 fixed support points (atoms). By capturing the variance and uncertainty of future rewards, it provides richer training signals and significantly improves stability and asymptotic performance on Atari benchmarks.
+   A distributional perspective on reinforcement learning. Instead of estimating only the expected mean Q-value (as DQN does), C51 models the entire probability distribution of returns using a categorical distribution with 51 fixed support points (atoms). By capturing the variance and uncertainty of future rewards, it provides richer training signals and significantly improves stability and asymptotic performance on Atari benchmarks.
   
 # 3. Extensive hyperparameter optimization 
 Learning rate, buffer size, and ent_coef (entropy coefficient) are tuned to analyze the trade-off between overfitting and exploration.
